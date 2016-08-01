@@ -1,0 +1,53 @@
+body {
+  background-color: #5e5e96;
+}
+h1 {
+  color: #1c1c5b;
+}
+
+h2 {
+  color: #afafaf;
+}
+
+h3 {
+  color: #afafaf;
+  padding: 10px;
+  margin: 30px 0 0 30px;
+}
+
+label {
+  font-family: sans-serif;
+  color: white;
+  margin-right: 5px;
+}
+
+input {
+  margin: 5px 0 5px 0;
+}
+
+#container {
+  border: 1px solid #afafaf;
+  padding: 10px;
+  margin: 30px;
+}
+
+.person {
+  border: 2px solid black;
+  padding: 2px;
+}
+
+.clicked {
+  border-color: red;
+}
+
+#monthlySalary {
+  color: #68c168;
+  font-size: 22px;
+  padding-left: 10px;
+  margin-left: 30px;
+}
+
+.person {
+  color: white;
+  border: 1px solid white;
+}
