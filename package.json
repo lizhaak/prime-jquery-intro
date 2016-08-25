@@ -1,0 +1,23 @@
+{
+  "name": "prime-jquery-intro",
+  "version": "1.0.0",
+  "description": "The lecture itself is broken into four parts.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizhaak/prime-jquery-intro.git"
+  },
+  "author": "lhaakens3@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lizhaak/prime-jquery-intro/issues"
+  },
+  "homepage": "https://github.com/lizhaak/prime-jquery-intro#readme",
+  "dependencies": {
+    "angular": "^1.5.8"
+  }
+}

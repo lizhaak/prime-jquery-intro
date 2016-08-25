@@ -3,35 +3,48 @@
   <head>
       <title>jQuery Forms</title>
       <script type="text/javascript" src="vendor/jquery-3.0.0.min.js"></script>
+      <script type="text/javascript" src="vendor/angular.min.js"></script>
       <script type="text/javascript" src="app.js"></script>
+      <script type="text/javascript" src="controllers/employeeController.js"></script>
       <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <h1>jQuery Forms</h1>
-    <div>
+  <body ng-app="myApp">
+    <h1>Angular (No Longer jQuery) Forms</h1>
+    <div ng-controller="employeeController">
       <form id="employeeinfo">
         <label for="employeefirstname">Employee's First Name:</label>
-        <input type="text" id="employeefirstname" name="employeefirstname" />
+        <input ng-model="employee.firstname" type="text" id="employeefirstname" name="employeefirstname" />
         <br />
         <label for="employeelastname">Employee's Last Name:</label>
-        <input type="text" id="employeelastname" name="employeelastname" />
+        <input ng-model="employee.lastname" type="text" id="employeelastname" name="employeelastname" />
         <br />
         <label for="employeeid">Employee's ID Number:</label>
-        <input type="number" id="employeeid" name="employeeid" />
+        <input ng-model="employee.id" type="number" id="employeeid" name="employeeid" />
         <br />
         <label for="employeejobtitle">Employee's Job Title:</label>
-        <input type="text" id="employeejobtitle" name="employeejobtitle" />
+        <input ng-model="employee.jobtitle" type="text" id="employeejobtitle" name="employeejobtitle" />
         <br />
         <label for="employeesalary">Employee's Salary (Yearly):</label>
-        <input type="number" id="employeesalary" name="employeesalary" />
+        <input ng-model="employee.salary" type="number" id="employeesalary" name="employeesalary" />
         <br />
-        <input type="submit" value="Submit Employee" />
+        <button ng-click="addEmployee()">Submit Employee</button>
       </form>
-    </div>
-    <div id="container">
-      <h2>Container</h2>
-    </div>
-    <h3>Monthly Salary Cost</h3>
-    <div id="monthlySalary"></div>
+
+      <div id="container">
+        <h2>Container</h2>
+        <div class="person" ng-repeat="person in people">
+          <p>Name: {{person.firstname}} {{person.lastname}}</p>
+          <p>ID: {{person.id}}</p>
+          <p>Job Title: {{person.jobtitle}}</p>
+          <p>Salary(Yearly): ${{person.salary}}</p>
+          <button class="remove" ng-click="deleteEmployee(person)">Remove</button>
+        </div>
+      </div>
+
+      <h3>Monthly Salary Cost</h3>
+      <div id="monthlySalary">${{monthlySalary}}</div>
+
+    </div>  <!-- closing tag for employeeController -->
+
   </body>
 </html>
