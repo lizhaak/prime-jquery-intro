@@ -36,13 +36,13 @@
           <p>Name: {{person.firstname}} {{person.lastname}}</p>
           <p>ID: {{person.id}}</p>
           <p>Job Title: {{person.jobtitle}}</p>
-          <p>Salary(Yearly): ${{person.salary}}</p>
+          <p>Salary(Yearly): {{person.salary | currency}}</p>
           <button class="remove" ng-click="deleteEmployee(person)">Remove</button>
         </div>
       </div>
 
       <h3>Monthly Salary Cost</h3>
-      <div id="monthlySalary">${{monthlySalary}}</div>
+      <div id="monthlySalary">{{monthlySalary | currency}}</div>
 
     </div>  <!-- closing tag for employeeController -->
 
